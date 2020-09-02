@@ -50,15 +50,29 @@ function requisto2(vet) { // vet aponta para vetor
 }
 function requisto3(vet) { // vet aponta para vetor
     var maior = vet[0].idade 
-    for(var i=0;i<vet.lenght;i++) {
+    for(var i=0;i<vet.length;i++) {
         if (vet[i].idade > maior) {
             maior = vet[i].idade
         }
     }
+    console.log(`Maior idade ${maior}`)
 }
 function requisto4(vet) { // vet aponta para vetor
-
+    var qtde = 0
+    for(var i=0;i<vet.length;i++) {
+        if (((vet[i].sexo == "F") && (vet[i].idade >= 20) && (vet[i].idade <= 40))
+            ||
+        (vet[i].olhos == "V") && (vet[i].altura < 1.70)) {
+            qtde++
+        }
+    }
 }
 function requisto5(vet) { // vet aponta para vetor
-
+    var qtde = 0
+    for(var i=0;i<vet.length;i++) {
+        if (vet[i].sexo == "M") {
+            qtde++
+        }
+    }
+    console.log(qtde/vet.length*100)
 }
